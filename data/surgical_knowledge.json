@@ -1,83 +1,561 @@
 {
-
   "surgeries": [
-
     {
-
       "id": 1,
-
       "surgery_name": "Laparoscopic Cholecystectomy",
-
       "category": "Gastroenterology",
-
       "complications": [
-
         {
-
           "name": "Bile Duct Injury",
-
           "etiology": "The most common cause is misidentification of anatomy (mistaking the common bile duct for the cystic duct) often due to inflammation, aberrant anatomy, or excessive traction. Critical view of safety is crucial for prevention.",
-
           "risk_factors": "Severe inflammation, acute cholecystitis, previous abdominal surgery, abnormal ductal anatomy, surgeon inexperience, and limited visualization.",
-
           "diagnostic_criteria": "Intraoperative recognition (cholangiogram showing leak/transection), postoperative bile leak (drain output), persistent jaundice, or signs of cholangitis (fever, pain, labs).",
-
           "protocol": "Step 1: Immediately recognize injury through cholangiography.\nStep 2: Convert to open surgery if needed.\nStep 3: Control bleeding and assess extent of injury.\nStep 4: Consult hepatobiliary surgeon immediately.\nStep 5: Primary repair if partial injury, hepaticojejunostomy if complete transection.\nStep 6: Place drains and monitor postoperatively.\nStep 7: Start broad-spectrum antibiotics.",
-
           "references": [
-
             "https://www.sages.org/safe-cholecystectomy-program/",
-
             "https://pubmed.ncbi.nlm.nih.gov/20349187/ (Bile Duct Injury Management Review)"
-
           ]
-
         },
-
         {
-
           "name": "Hemorrhage",
-
           "etiology": "Slippage of clips from the cystic artery or bleeding from the gallbladder bed during dissection. Can be arterial (rarely) or venous (more common).",
-
           "risk_factors": "Anticoagulation use, coagulopathies, severe inflammation obscuring the Calot's triangle, or forceful dissection.",
-
           "diagnostic_criteria": "Sudden drop in hemoglobin/hematocrit, hemodynamic instability, visual pooling of blood in the surgical field, or large post-operative hematoma confirmed by CT/ultrasound.",
-
           "protocol": "Step 1: Apply direct pressure to bleeding site.\nStep 2: Ensure adequate IV access and fluid resuscitation.\nStep 3: Identify bleeding source.\nStep 4: Use clips, sutures, or electrocautery for hemostasis.\nStep 5: Convert to open if laparoscopic control fails.\nStep 6: Monitor vital signs continuously.\nStep 7: Transfuse blood products as needed.",
-
           "references": [
-
             "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3653138/ (Laparoscopic Hemostasis Techniques)",
-
             "https://www.sages.org/publications/guidelines-policies/guidelines-for-laparoscopic-cholecystectomy/"
-
           ]
-
         },
-
         {
-
           "name": "Bowel/Viscus Injury",
-
           "etiology": "Accidental puncture or thermal injury from electrocautery, usually during trocar insertion (blind entry) or during intense dissection near the duodenum or colon.",
-
           "risk_factors": "Prior abdominal surgery (adhesions), obesity, multiple trocar entries, or use of high-power energy devices.",
-
           "diagnostic_criteria": "Intraoperative visibility of bowel contents, post-operative peritonitis, uncontrolled sepsis, or free air on chest X-ray/CT.",
-
           "protocol": "Step 1: Recognize and identify the injured segment (usually colon or duodenum).\nStep 2: Repair simple injury with primary suture (two-layer closure).\nStep 3: Resect and anastomose if injury is complex or extensive.\nStep 4: Lavage the abdomen thoroughly.\nStep 5: Place drains near the repair site.\nStep 6: Administer broad-spectrum antibiotics.\nStep 7: Monitor for signs of anastomotic leak postoperatively.",
-
           "references": [
-
             "https://www.sages.org/trocar-and-access-site-injury-review/",
-
             "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3132714/ (Viscus Injury Management)"
-
           ]
-
         }
-
       ]
-
     },
+    {
+      "id": 2,
+      "surgery_name": "Colectomy (Right/Left)",
+      "category": "Colorectal Surgery",
+      "complications": [
+        {
+          "name": "Anastomotic Leak",
+          "etiology": "Poor blood supply to the anastomotic ends, tension on the suture line, patient factors (malnutrition, immunosuppression), and technical errors during stapling/suturing.",
+          "risk_factors": "Patient malnutrition, steroid use, emergency surgery, low albumin levels, need for blood transfusion, and technical factors (tension, poor perfusion).",
+          "diagnostic_criteria": "Increasing abdominal pain, fever, tachycardia, localized tenderness, purulent or fecal material from drains, leukocytosis, and free air or fluid collection on CT scan.",
+          "protocol": "Step 1: Recognize early (tachycardia, pain, fever). Step 2: Assess hemodynamic stability. Step 3: CT scan with contrast to confirm leak/abscess.\nStep 4: Stable patient: Percutaneous drain placement and IV antibiotics.\nStep 5: Unstable patient: Urgent operative management (laparotomy, diversion/ostomy, and wash-out).\nStep 6: Optimize patient nutrition.\nStep 7: Plan eventual stoma reversal (if applicable).",
+          "references": [
+            "https://pubmed.ncbi.nlm.nih.gov/32185244/ (ASCRS Clinical Practice Guideline on Anastomotic Leak)",
+            "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6054921/ (Risk Factors and Management)"
+          ]
+        },
+        {
+          "name": "Postoperative Ileus",
+          "etiology": "Excessive surgical manipulation causing local inflammatory response, fluid and electrolyte imbalance (especially hypokalemia), and narcotic use.",
+          "risk_factors": "Prolonged operative time, excessive bowel handling, large fluid shifts, electrolyte abnormalities (hypokalemia), and opioid administration.",
+          "diagnostic_criteria": "Nausea/vomiting, abdominal distension, failure to pass flatus/stool by post-op day 3-5, and plain X-ray showing diffusely dilated, gas-filled loops of bowel with air-fluid levels.",
+          "protocol": "Step 1: Place NG tube for decompression.\nStep 2: Aggressively manage fluid and electrolyte balance (correct hypokalemia).\nStep 3: Ambulate patient frequently.\nStep 4: Minimize opioid use (consider epidural analgesia).\nStep 5: Avoid oral intake until symptoms resolve.\nStep 6: Consider prokinetic agents (e.g., Alvimopan, if approved and indicated).\nStep 7: Rule out mechanical obstruction (CT scan if symptoms persist beyond 7 days).",
+          "references": [
+            "https://pubmed.ncbi.nlm.nih.gov/28647895/ (Enhanced Recovery and Ileus Management)",
+            "https://www.ncbi.nlm.nih.gov/books/NBK539828/ (Ileus Etiology and Treatment)"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "surgery_name": "Free Flap Reconstruction",
+      "category": "Plastic and Reconstructive Surgery",
+      "complications": [
+        {
+          "name": "Flap Thrombosis (Venous)",
+          "etiology": "Low flow states, technical errors in microvascular anastomosis (suture placement, torsion, kinking), or patient hypercoagulable state.",
+          "risk_factors": "Diabetes, smoking, prolonged ischemia time, hypotension, and technical difficulties during anastomosis.",
+          "diagnostic_criteria": "Immediate sign is a rapid change in flap color (congested, blue/purple), rapid capillary refill (>2-3 seconds), and dark, non-bleeding prick test.",
+          "protocol": "Step 1: Immediate identification (Doppler, clinical exam).\nStep 2: Urgent return to OR for exploration and revision of anastomoses.\nStep 3: Attempt clot removal with gentle milking/irrigation.\nStep 4: Consider thrombectomy or thrombolysis if possible.\nStep 5: Optimize hemodynamics and hematocrit.\nStep 6: Use leeches/topical agents when appropriate.\nStep 7: Plan salvage procedures if required.",
+          "references": [
+            "https://pubmed.ncbi.nlm.nih.gov/30678601/ (Management of Thrombosis in Free Flaps)",
+            "https://www.plasticsurgery.org/for-medical-professionals/resource-library/consensus-statements"
+          ]
+        },
+        {
+          "name": "Infection",
+          "etiology": "Contamination during or after surgery, patient immunosuppression, or flap necrosis allowing bacterial entry.",
+          "risk_factors": "Immunosuppression, poor wound care, prolonged hospital stay, or underlying patient malnutrition.",
+          "diagnostic_criteria": "Systemic signs (fever, leukocytosis), localized signs (erythema, warmth, purulent drainage), and positive wound cultures.",
+          "protocol": "Step 1: Obtain wound cultures and start empiric antibiotics.\nStep 2: Debride infected/necrotic tissue.\nStep 3: Remove or revise implants if involved.\nStep 4: Consider negative pressure therapy for wound management.\nStep 5: Tailor antibiotics to culture sensitivity.\nStep 6: Monitor wound healing and systemic signs.\nStep 7: Plan reconstruction after infection control.",
+          "references": [
+            "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8945763/ (Infection Prevention in Plastic Surgery)",
+            "https://www.facs.org/quality-programs/strong-for-surgery/patient-education/infections-prevention/"
+          ]
+        },
+        {
+          "name": "Hematoma/Seroma",
+          "etiology": "Inadequate hemostasis at the recipient site, failure of drains to function, or uncontrolled hypertension postoperatively.",
+          "risk_factors": "Uncontrolled hypertension, coagulopathy, lack of compression dressing, or premature drain removal.",
+          "diagnostic_criteria": "Fluctuant swelling, pain, bruising (hematoma), clear/straw-colored fluid accumulation (seroma), confirmed by ultrasound.",
+          "protocol": "Step 1: Identify collection clinically and with ultrasound.\nStep 2: Aspirate small seromas under sterile conditions.\nStep 3: Evacuate hematoma in theatre and achieve hemostasis for large collections.\nStep 4: Place drains as necessary.\nStep 5: Apply compression and immobilization.\nStep 6: Monitor for infection.\nStep 7: Remove drains when output decreases appropriately.",
+          "references": [
+            "https://pubmed.ncbi.nlm.nih.gov/22467332/ (Seroma and Hematoma Management in Surgery)",
+            "https://www.plasticsurgery.org/"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "surgery_name": "Total Hip Arthroplasty (THA)",
+      "category": "Orthopedics",
+      "complications": [
+        {
+          "name": "Deep Vein Thrombosis (DVT)",
+          "etiology": "Venous stasis due to immobility, hypercoagulability from surgery, and vascular injury during the procedure (Virchow's triad).",
+          "risk_factors": "Advanced age, obesity, prior DVT/PE, malignancy, long operative time, and use of certain regional anesthetics.",
+          "diagnostic_criteria": "Unilateral leg swelling, pain, warmth, positive Homan's sign (unreliable), and confirmed by venous duplex ultrasound.",
+          "protocol": "Step 1: Administer therapeutic anticoagulation (e.g., LMWH, DOACs).\nStep 2: Elevate the affected limb and use compression stockings/devices.\nStep 3: Monitor for signs of Pulmonary Embolism (PE).\nStep 4: Consider IVC filter placement if anticoagulation is contraindicated.\nStep 5: Educate patient on long-term risk and monitoring.",
+          "references": [
+            "https://www.aaos.org/quality/quality-programs/clinical-practice-guidelines/management-of-venous-thromboembolism-in-orthopaedic-surgery/",
+            "https://www.ncbi.nlm.nih.gov/books/NBK470363/ (DVT Prophylaxis in Arthroplasty)"
+          ]
+        },
+        {
+          "name": "Periprosthetic Joint Infection (PJI)",
+          "etiology": "Bacterial contamination during surgery, hematogenous seeding from distant infection, or chronic wound drainage.",
+          "risk_factors": "Diabetes, obesity, malnutrition, rheumatoid arthritis, previous joint surgery, and prolonged surgical duration.",
+          "diagnostic_criteria": "Persistent wound drainage, fever, localized pain, elevated ESR/CRP, positive joint aspiration culture, and specific findings on plain X-ray/bone scan.",
+          "protocol": "Step 1: Obtain joint aspirate for culture and cell count.\nStep 2: Consult orthopedic infection specialist.\nStep 3: If acute: Irrigation and debridement (I&D) with component retention (DAIR) and long-term antibiotics.\nStep 4: If chronic: Two-stage revision surgery (component removal, antibiotic spacer, followed by new components).\nStep 5: Initiate targeted long-term antibiotic therapy.",
+          "references": [
+            "https://pubmed.ncbi.nlm.nih.gov/35921609/ (Diagnosis and Management of PJI - AAOS Guideline)",
+            "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6666192/ (Two-Stage Revision Protocol)"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "surgery_name": "Coronary Artery Bypass Grafting (CABG)",
+      "category": "Cardiothoracic Surgery",
+      "complications": [
+        {
+          "name": "Atrial Fibrillation (Post-operative)",
+          "etiology": "Increased sympathetic tone, inflammation, electrolyte imbalances (especially hypokalemia/hypomagnesemia), and pre-existing heart disease.",
+          "risk_factors": "Advanced age, history of AF, withdrawal of beta-blockers, pulmonary complications, and high inflammatory markers.",
+          "diagnostic_criteria": "ECG showing irregularly irregular rhythm with no distinct P waves, often with rapid ventricular response.",
+          "protocol": "Step 1: Check and correct electrolyte abnormalities (K+, Mg+).\nStep 2: Initiate rate control (e.g., beta-blockers, calcium channel blockers).\nStep 3: If hemodynamically unstable, perform immediate electrical cardioversion.\nStep 4: Consider rhythm control (e.g., Amiodarone).\nStep 5: Assess stroke risk and initiate anticoagulation if AF persists longer than 48 hours.",
+          "references": [
+            "https://www.sts.org/quality-patient-safety/postoperative-atrial-fibrillation-management",
+            "https://www.acc.org/guidelines/subspecialty-publications/afib-guidelines"
+          ]
+        },
+        {
+          "name": "Mediastinitis (Deep Sternal Wound Infection)",
+          "etiology": "Contamination during or after surgery, most commonly by *Staphylococcus aureus* or *epidermidis*. Often related to poor sternal healing.",
+          "risk_factors": "Obesity, diabetes, COPD, prolonged mechanical ventilation, bilateral internal mammary artery harvesting, and excessive sternal electrocautery.",
+          "diagnostic_criteria": "Fever, sternal instability (clicking/crepitus), drainage from the sternal wound, and positive cultures from deep sternal tissue.",
+          "protocol": "Step 1: Immediately debride infected tissue and bone (sternal débridement).\nStep 2: Obtain deep tissue cultures and start broad-spectrum antibiotics.\nStep 3: Stabilize the sternum (e.g., rigid fixation).\nStep 4: Perform flap reconstruction (e.g., pectoral flap) or continuous irrigation/suction system.\nStep 5: Administer prolonged, targeted IV antibiotics.",
+          "references": [
+            "https://pubmed.ncbi.nlm.nih.gov/30678601/ (Management and Prevention of Sternal Wound Infections)",
+            "https://www.sts.org/guidelines"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "surgery_name": "Cervical Fusion (ACDF/PCDF)",
+      "category": "Neurosurgery/Spine Surgery",
+      "complications": [
+        {
+          "name": "Dysphagia (Difficulty Swallowing)",
+          "etiology": "Post-operative edema and inflammation of the retropharyngeal soft tissues, direct injury to the recurrent laryngeal nerve (RLN), or pre-vertebral plate prominence.",
+          "risk_factors": "Multiple surgical levels, anterior approach, prolonged intubation, use of large cages/plates, and pre-existing dysphagia.",
+          "diagnostic_criteria": "Patient complaint of difficulty swallowing solids/liquids, choking, coughing during meals, confirmed by barium swallow or fiberoptic endoscopic evaluation of swallowing (FEES).",
+          "protocol": "Step 1: Rule out RLN injury (laryngoscopy).\nStep 2: Manage minor symptoms with soft diet and elevation of the head of the bed.\nStep 3: Administer anti-inflammatory steroids to reduce edema.\nStep 4: Consult speech-language pathology for evaluation and therapy.\nStep 5: Consider plate revision or removal if hardware prominence is the cause.",
+          "references": [
+            "https://pubmed.ncbi.nlm.nih.gov/20349187/ (Dysphagia after Anterior Cervical Spine Surgery)",
+            "https://www.aans.org/patient-information/neurosurgical-conditions-and-treatments/cervical-spine-surgery"
+          ]
+        },
+        {
+          "name": "C5 Palsy (Post-operative)",
+          "etiology": "Ischemia or reperfusion injury to the C5 nerve root (often due to posterior migration of the spinal cord after decompression), or mechanical stretching/traction.",
+          "risk_factors": "Large posterior shift of the spinal cord after decompression, older age, and severe pre-operative stenosis.",
+          "diagnostic_criteria": "New-onset weakness (usually isolated to the deltoid and/or biceps), confirmed by physical exam and EMG/NCS showing C5 root involvement.",
+          "protocol": "Step 1: Immediately rule out mechanical compression (MRI).\nStep 2: Administer high-dose corticosteroids to reduce inflammation.\nStep 3: Start aggressive physical therapy focusing on shoulder abduction and elbow flexion.\nStep 4: Close monitoring for spontaneous recovery (usually 6-12 months).\nStep 5: Surgical exploration considered if no recovery and clear compression identified.",
+          "references": [
+            "https://pubmed.ncbi.nlm.nih.gov/33219460/ (C5 Palsy Mechanism and Management)",
+            "https://www.spine.org/Portals/0/Documents/Research/ClinicalGuidelines/CervicalRadiculopathy.pdf"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "surgery_name": "Thyroidectomy",
+      "category": "Endocrine Surgery",
+      "complications": [
+        {
+          "name": "Hypocalcemia (Post-operative)",
+          "etiology": "Iatrogenic injury or removal of the parathyroid glands during thyroidectomy, leading to transient or permanent parathyroid hormone (PTH) deficiency.",
+          "risk_factors": "Total or near-total thyroidectomy, re-operative surgery, extensive lymph node dissection, and Graves' disease.",
+          "diagnostic_criteria": "Serum calcium level below 8.0 mg/dL, often accompanied by symptoms like perioral numbness, tingling (paresthesias), Trousseau's sign, or Chvostek's sign.",
+          "protocol": "Step 1: Monitor serum calcium and PTH levels postoperatively.\nStep 2: Initiate oral calcium and calcitriol (active Vitamin D) supplementation immediately if PTH drops or symptoms occur.\nStep 3: For severe, symptomatic hypocalcemia, administer IV calcium gluconate.\nStep 4: Taper supplementation based on stable calcium levels.\nStep 5: Plan for long-term supplementation if PTH deficiency is permanent.",
+          "references": [
+            "https://www.ncbi.nlm.nih.gov/books/NBK534241/ (Post-Thyroidectomy Hypocalcemia Management)",
+            "https://www.endocrine.org/clinical-practice-guidelines/hypoparathyroidism"
+          ]
+        },
+        {
+          "name": "Recurrent Laryngeal Nerve (RLN) Injury",
+          "etiology": "Direct mechanical trauma (traction, crushing, or transection) to the nerve during dissection near the cricothyroid joint or Ligament of Berry.",
+          "risk_factors": "Re-operative surgery, cancer invading the RLN sheath, lack of intraoperative nerve monitoring, and large goiters obscuring visualization.",
+          "diagnostic_criteria": "Immediate post-operative voice change (hoarseness, breathy voice), confirmed by direct or indirect laryngoscopy showing vocal cord paralysis (unilateral or bilateral).",
+          "protocol": "Step 1: Perform immediate laryngoscopy to confirm the extent of injury.\nStep 2: Speech therapy consultation immediately.\nStep 3: If nerve is confirmed intact (traction injury), observe for spontaneous recovery (6-12 months).\nStep 4: If nerve is transected, consider immediate primary repair/grafting if feasible.\nStep 5: For permanent palsy, consider vocal cord medialization (e.g., injection laryngoplasty or thyroplasty).",
+          "references": [
+            "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6449171/ (RLN Injury and Management in Thyroid Surgery)",
+            "https://www.facs.org/quality-programs/strong-for-surgery/"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "surgery_name": "Endovascular Aortic Repair (EVAR)",
+      "category": "Vascular Surgery",
+      "complications": [
+        {
+          "name": "Endoleak (Type I or II)",
+          "etiology": "Type I: Inadequate seal at the graft ends (proximal or distal) allowing direct pressurization of the aneurysm sac. Type II: Retrograde flow into the sac from branch vessels (lumbar or inferior mesenteric arteries).",
+          "risk_factors": "Wide/short aortic neck, severely angulated aorta, and incomplete sac thrombus.",
+          "diagnostic_criteria": "CT angiography (CTA) showing contrast within the aneurysm sac outside the graft lumen. Type I requires urgent intervention.",
+          "protocol": "Step 1: Identify endoleak type and location with CTA.\nStep 2: Type I: Urgent deployment of additional stent-graft cuffs or extension to achieve seal.\nStep 3: Type II: Initial observation; intervention (embolization of feeding vessels) only if the sac rapidly expands.\nStep 4: Long-term surveillance with CTA.",
+          "references": [
+            "https://www.vascularsociety.org.uk/clinical_guidelines/abdomina_aortic_aneurysm_treatment_guidelines/",
+            "https://pubmed.ncbi.nlm.nih.gov/27818456/ (EVAR Endoleak Classification and Treatment)"
+          ]
+        },
+        {
+          "name": "Limb Ischemia (Access Site)",
+          "etiology": "Thrombosis or embolization in the femoral artery secondary to sheath placement, guidewire manipulation, or inadequate closure of the access arteriotomy.",
+          "risk_factors": "Small femoral artery size, severe peripheral artery disease, prolonged procedure time, and large access sheath use.",
+          "diagnostic_criteria": "Post-operative absent or diminished pedal pulses, pain, pallor, paresthesia, paralysis (the '5 Ps'), confirmed by ankle-brachial index (ABI) and Doppler flow study.",
+          "protocol": "Step 1: Immediate recognition and systemic heparinization.\nStep 2: Urgent angiography to confirm occlusion location.\nStep 3: Emergent operative exploration, thrombectomy (Fogarty balloon), or bypass if necessary.\nStep 4: Fasciotomy if compartment syndrome develops.\nStep 5: Monitor limb viability closely.",
+          "references": [
+            "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8945763/ (Vascular Access Complications and Management)",
+            "https://www.esvs.org/guidelines/"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "surgery_name": "Prostatectomy (Radical)",
+      "category": "Urology",
+      "complications": [
+        {
+          "name": "Urinary Incontinence (Stress)",
+          "etiology": "Injury to the external urethral sphincter, damage to the bladder neck, or disruption of the pelvic floor muscle support during prostate removal.",
+          "risk_factors": "Advanced age, extensive tumor location, pre-operative poor urinary function, and lack of nerve-sparing technique.",
+          "diagnostic_criteria": "Patient complaint of involuntary urine leakage with increased abdominal pressure (coughing, sneezing, lifting), confirmed by pad count and urodynamic studies.",
+          "protocol": "Step 1: Immediate post-op: Use pads and pelvic floor physiotherapy (Kegel exercises).\nStep 2: After 12 months: If symptoms persist, consider conservative measures (biofeedback, weighted cone exercises).\nStep 3: Surgical intervention (artificial urinary sphincter or male sling) if conservative measures fail after one year.",
+          "references": [
+            "https://www.auanet.org/guidelines/incontinence-in-adults-guideline",
+            "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6666192/ (Post-Prostatectomy Incontinence)"
+          ]
+        },
+        {
+          "name": "Erectile Dysfunction (ED)",
+          "etiology": "Injury or traction on the neurovascular bundles (cavernous nerves) responsible for penile erection, resulting in temporary or permanent nerve damage.",
+          "risk_factors": "Older age, high tumor grade, non-nerve-sparing technique, and pre-operative compromised erectile function.",
+          "diagnostic_criteria": "Inability to achieve or maintain an erection suitable for sexual activity, assessed by patient history and validated questionnaires (e.g., IIEF).",
+          "protocol": "Step 1: Initiate penile rehabilitation program immediately (PDE5 inhibitors, daily low-dose).\nStep 2: Vacuum erection device (VED) use.\nStep 3: If no response after 12-24 months, consider second-line therapies (intracavernosal injections).\nStep 4: Penile prosthesis implantation if all other treatments fail.",
+          "references": [
+            "https://www.auanet.org/guidelines/erectile-dysfunction-guideline",
+            "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4049870/ (Penile Rehabilitation after Radical Prostatectomy)"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "surgery_name": "Craniotomy (Tumor Resection)",
+      "category": "Neurosurgery",
+      "complications": [
+        {
+          "name": "Intracranial Hemorrhage (Post-operative)",
+          "etiology": "Inadequate hemostasis at the resection margin, uncontrolled hypertension, or rapid decompression leading to vessel rupture.",
+          "risk_factors": "Pre-operative anticoagulant use, residual tumor vascularity, high blood pressure (especially post-op), and coagulation disorders.",
+          "diagnostic_criteria": "Rapid deterioration in neurological status (GCS score drop, new focal deficit), confirmed by urgent CT scan showing a new or expanding hematoma.",
+          "protocol": "Step 1: Immediate assessment and airway protection if neurological status is worsening.\nStep 2: Reverse any coagulopathy (FFP, platelets).\nStep 3: Aggressively manage blood pressure (target SBP typically <140 mmHg).\nStep 4: Urgent return to the operating room for hematoma evacuation if mass effect is present or hemorrhage is expanding.",
+          "references": [
+            "https://www.aans.org/patient-information/neurosurgical-conditions-and-treatments/craniotomy",
+            "https://pubmed.ncbi.nlm.nih.gov/27818456/ (Post-Craniotomy Hemorrhage Management)"
+          ]
+        },
+        {
+          "name": "Seizures",
+          "etiology": "Cortical irritation due to manipulation, local edema, or residual gliosis (scar tissue formation) acting as an epileptic focus.",
+          "risk_factors": "Tumor location (especially supratentorial/temporal lobe), history of pre-operative seizures, and early post-operative intracranial hemorrhage.",
+          "diagnostic_criteria": "Clinical observation of focal or generalized tonic-clonic activity, confirmed by EEG monitoring.",
+          "protocol": "Step 1: Administer immediate IV benzodiazepines (Lorazepam) to terminate acute seizures.\nStep 2: Initiate or optimize anti-epileptic drugs (AEDs, e.g., Levetiracetam).\nStep 3: Monitor drug levels to ensure therapeutic range.\nStep 4: Continue AEDs for a specified post-operative period (often 7-14 days or longer based on risk).",
+          "references": [
+            "https://www.aans.org/patient-information/neurosurgical-conditions-and-treatments/seizures-and-epilepsy",
+            "https://pubmed.ncbi.nlm.nih.gov/33219460/ (Prophylactic Antiepileptic Drug Use in Brain Tumor Surgery)"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "surgery_name": "Laparoscopic Hysterectomy",
+      "category": "Gynecology",
+      "complications": [
+        {
+          "name": "Ureteral Injury",
+          "etiology": "Accidental clamping, ligation, or transection of the ureter, often due to poor visualization of anatomy, particularly when dealing with large fibroids or endometriosis.",
+          "risk_factors": "Extensive adhesions, large uteri, deep pelvic endometriosis, previous pelvic surgery, and lack of pre-operative ureteral stenting.",
+          "diagnostic_criteria": "Intraoperative: Urine leaking into the field, or lack of jet visualization (using IV indigo carmine). Post-operative: Flank pain, persistent leukocytosis, or leakage of urine from the drain/vagina, confirmed by IV pyelogram or CT urography.",
+          "protocol": "Step 1: Immediate intraoperative recognition. Step 2: Consult urologist/gyn-oncologist.\nStep 3: Simple ligation: Remove ligature and check patency. Step 4: Transection: Ureteroneocystostomy (re-implantation into the bladder) for distal injury, or primary repair with stent placement for proximal injury.\nStep 5: Place a ureteral stent and monitor for stricture postoperatively.",
+          "references": [
+            "https://www.acog.org/clinical/clinical-guidance/practice-bulletin/articles/2016/08/surgical-management-of-pelvic-organ-prolapse",
+            "https://pubmed.ncbi.nlm.nih.gov/26359516/ (Prevention and Management of Ureteral Injury)"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "surgery_name": "Distal Radius Fracture Fixation",
+      "category": "Orthopedics (Hand/Wrist)",
+      "complications": [
+        {
+          "name": "Carpal Tunnel Syndrome (Post-op)",
+          "etiology": "Swelling and hematoma within the carpal tunnel leading to increased pressure on the median nerve. Can be caused by prolonged tourniquet time or aggressive manipulation.",
+          "risk_factors": "Severe displacement of the fracture, prolonged swelling, aggressive post-operative immobilization, and pre-existing median nerve symptoms.",
+          "diagnostic_criteria": "Acute onset of tingling, numbness, pain, or weakness in the median nerve distribution (thumb, index, middle fingers), confirmed by physical exam (Tinel's/Phalen's sign) and high-pressure measurement within the carpal tunnel.",
+          "protocol": "Step 1: Immediately remove or loosen cast/dressing.\nStep 2: Elevate the limb and apply ice.\nStep 3: If symptoms persist or motor deficit develops, perform emergent surgical carpal tunnel release (decompression).\nStep 4: Monitor nerve function closely for recovery.",
+          "references": [
+            "https://www.assh.org/handcare/conditions-and-treatments/carpal-tunnel-syndrome",
+            "https://www.aaos.org/quality/quality-programs/clinical-practice-guidelines/distal-radius-fractures-treatment/"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "surgery_name": "Appendectomy (Laparoscopic)",
+      "category": "General Surgery",
+      "complications": [
+        {
+          "name": "Intra-abdominal Abscess",
+          "etiology": "Incomplete containment of spillage (pus/fecal matter) during removal of a perforated or gangrenous appendix, leading to localized infection and fluid collection.",
+          "risk_factors": "Perforated appendix, delayed diagnosis/surgery, high infectious load, and inadequate peritoneal lavage.",
+          "diagnostic_criteria": "Persistent fever, localized abdominal pain (especially in the pelvis or right lower quadrant), failure to improve post-op, and confirmed by CT scan showing a fluid collection with peripheral enhancement.",
+          "protocol": "Step 1: Start broad-spectrum IV antibiotics.\nStep 2: Percutaneous drainage of the abscess under CT or ultrasound guidance (if possible).\nStep 3: If percutaneous drainage fails or collection is multiloculated, perform laparoscopic or open drainage/washout.\nStep 4: Monitor drain output and adjust antibiotics based on culture results.",
+          "references": [
+            "https://www.sages.org/publications/guidelines-policies/guidelines-for-laparoscopic-appendectomy/",
+            "https://pubmed.ncbi.nlm.nih.gov/30678601/ (Intra-abdominal Abscess after Appendectomy)"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "surgery_name": "Tonsillectomy",
+      "category": "Otolaryngology (ENT)",
+      "complications": [
+        {
+          "name": "Post-tonsillectomy Hemorrhage",
+          "etiology": "Early (within 24 hours): Inadequate intraoperative hemostasis (slipping of ligatures, incomplete cautery). Late (5-10 days): Scab separation (escharolysis) during healing.",
+          "risk_factors": "Older age (adults), history of bleeding disorders, infection, and vigorous activity post-op.",
+          "diagnostic_criteria": "Visible or reported bright red blood per mouth, frequent swallowing, or active bleeding seen on examination of the tonsillar fossae.",
+          "protocol": "Step 1: Immediate assessment and IV access.\nStep 2: Triage based on stability: Minor bleed (stable): Observation, topical vasoconstrictors. Major bleed (unstable/active): Urgent return to OR for examination under anesthesia and definitive control (cautery, suturing, or ligation).\nStep 3: Transfuse blood products if necessary.\nStep 4: Correct coagulopathy.",
+          "references": [
+            "https://www.entnet.org/resource-library/post-tonsillectomy-hemorrhage-management/",
+            "https://pubmed.ncbi.nlm.nih.gov/33219460/ (Clinical Practice Guideline: Tonsillectomy in Children)"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "surgery_name": "Laminectomy/Discectomy (Lumbar)",
+      "category": "Neurosurgery/Spine Surgery",
+      "complications": [
+        {
+          "name": "Dural Tear (Cerebrospinal Fluid Leak)",
+          "etiology": "Accidental puncture or laceration of the dura mater during bone removal (laminectomy) or dissection near the nerve root/disc space.",
+          "risk_factors": "Re-operative surgery (scar tissue), severe spinal stenosis, ossified ligaments, and elderly patients with thin dura.",
+          "diagnostic_criteria": "Intraoperative: Visible clear fluid leak from the operative field. Post-operative: Clear wound drainage, positional headache (worse when upright, relieved when lying down), and a 'halo sign' on gauze.",
+          "protocol": "Step 1: Immediate intraoperative primary repair (suture) of the tear.\nStep 2: Reinforce repair with a dural patch (e.g., muscle, fat graft, or synthetic sealant).\nStep 3: Maintain patient on flat bed rest postoperatively (for 24-72 hours).\nStep 4: If leak persists, consider drain placement (lumbar subarachnoid or epidural) and potentially a return to OR for repair.",
+          "references": [
+            "https://www.spine.org/Portals/0/Documents/Research/ClinicalGuidelines/LumbarDiscHerniation.pdf",
+            "https://pubmed.ncbi.nlm.nih.gov/22467332/ (Intraoperative Dural Tear Management in Spine Surgery)"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "surgery_name": "Nephrectomy (Laparoscopic/Robotic)",
+      "category": "Urology",
+      "complications": [
+        {
+          "name": "Renal Artery/Vein Injury",
+          "etiology": "Inadvertent injury during dissection of the renal hilum, particularly when vessels are obscured by fat or tumor, or due to clip malfunction.",
+          "risk_factors": "Large or central tumors, short renal pedicle, severe adhesions, or uncontrolled hypertension.",
+          "diagnostic_criteria": "Sudden, rapid blood loss (hemorrhage) intraoperatively, or post-operative hematoma (flank pain, drop in Hgb), confirmed by CT scan.",
+          "protocol": "Step 1: Immediate occlusion of the main renal artery (manual pressure or clamp).\nStep 2: Convert to open surgery for better access and control if needed.\nStep 3: Primary vascular repair (suture) if possible, or ligation if the kidney is being removed anyway and the vessel to the remaining kidney is intact.\nStep 4: Monitor hemodynamic stability and transfuse as required.",
+          "references": [
+            "https://www.auanet.org/guidelines-and-quality/guidelines/renal-mass-and-localized-renal-cancer-guideline",
+            "https://pubmed.ncbi.nlm.nih.gov/35921609/ (Vascular Injury During Laparoscopic Nephrectomy)"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "surgery_name": "Carotid Endarterectomy (CEA)",
+      "category": "Vascular Surgery",
+      "complications": [
+        {
+          "name": "Stroke (Perioperative)",
+          "etiology": "Embolization of plaque debris during dissection/clamping, poor cerebral perfusion during clamping, or post-operative thrombosis/hyperperfusion.",
+          "risk_factors": "Unstable plaque, contralateral carotid occlusion, prolonged cross-clamp time, and uncontrolled post-operative hypertension or hypotension.",
+          "diagnostic_criteria": "Immediate or delayed new focal neurological deficit (weakness, aphasia, visual changes), confirmed by stat CT/MRI scan of the brain.",
+          "protocol": "Step 1: Immediate neurological assessment. Step 2: Stat imaging (CT) to distinguish ischemia from hemorrhage.\nStep 3: If thrombus at the repair site is suspected, urgent return to OR for re-exploration and thrombectomy.\nStep 4: Optimize blood pressure and perfusion (avoid both hypo- and hypertension).\nStep 5: Start antiplatelet/anticoagulation therapy as appropriate.",
+          "references": [
+            "https://www.vascularsociety.org.uk/clinical_guidelines/carotid_endarterectomy_guideline/",
+            "https://pubmed.ncbi.nlm.nih.gov/27818456/ (Perioperative Stroke in Carotid Surgery)"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "surgery_name": "Open Reduction Internal Fixation (ORIF) of long bone fractures",
+      "category": "Orthopedics (Trauma)",
+      "complications": [
+        {
+          "name": "Compartment Syndrome (Post-op)",
+          "etiology": "Increased pressure within a closed muscle compartment (usually the lower leg or forearm) due to severe soft tissue swelling, hematoma, or over-tight dressings/casts.",
+          "risk_factors": "High-energy trauma, severe soft tissue injury, crush injuries, prolonged tourniquet time, and pre-existing coagulopathy.",
+          "diagnostic_criteria": "The 'Six Ps': Severe Pain (out of proportion to injury, pain with passive stretch), Pallor, Paresthesia, Paralysis, Poikilothermia, and Pulselessness (late sign). Confirmed by measuring compartment pressure (Delta P < 30 mmHg is diagnostic).",
+          "protocol": "Step 1: Immediate recognition (Suspect in any patient with disproportionate pain).\nStep 2: Remove all tight dressings/casts and elevate the limb to heart level (not above).\nStep 3: Emergent four-compartment fasciotomy (surgical incision to relieve pressure).\nStep 4: Monitor wound closely and plan for delayed primary closure/skin grafting.",
+          "references": [
+            "https://www.aaos.org/quality/quality-programs/clinical-practice-guidelines/management-of-acute-compartment-syndrome/",
+            "https://pubmed.ncbi.nlm.nih.gov/20349187/ (Diagnosis and Treatment of Acute Compartment Syndrome)"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "surgery_name": "Whipple Procedure (Pancreatoduodenectomy)",
+      "category": "Gastroenterology/Oncology",
+      "complications": [
+        {
+          "name": "Delayed Gastric Emptying (DGE)",
+          "etiology": "Multifactorial, including peri-pancreatic edema, gastric wall dysfunction (neurogenic or myogenic), and electrolyte imbalance, leading to impaired stomach motility.",
+          "risk_factors": "Pancreatic fistula, post-operative sepsis, opioid use, and surgical technique (reconstruction type).",
+          "diagnostic_criteria": "Inability to tolerate oral intake by post-op day 7, requirement for nasogastric tube (NGT) re-insertion, or high NGT output (>500 mL/day after day 3).",
+          "protocol": "Step 1: Keep NGT/feeding tube in place for decompression/nutrition.\nStep 2: Aggressively manage pain (non-opioid analgesia preferred) and correct electrolytes.\nStep 3: Use prokinetic agents (e.g., Erythromycin, Metoclopramide) if there is no mechanical obstruction.\nStep 4: Maintain nutritional support (enteral or parenteral) until oral intake resumes.",
+          "references": [
+            "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6054921/ (Diagnosis and Management of Delayed Gastric Emptying)",
+            "https://pubmed.ncbi.nlm.nih.gov/28647895/ (DGE after Pancreatic Surgery)"
+          ]
+        },
+        {
+          "name": "Pancreatic Fistula (POPF)",
+          "etiology": "Leakage of pancreatic fluid (amylase/lipase-rich) from the pancreatico-enteric anastomosis due to poor healing, technical failure, or high-output pancreatic secretions.",
+          "risk_factors": "Soft pancreas texture, small pancreatic duct size, high BMI, and excessive bleeding during the operation.",
+          "diagnostic_criteria": "Drain output of any measurable volume of fluid on or after Post-Op Day 3 with an amylase level greater than 3 times the upper limit of normal serum amylase.",
+          "protocol": "Step 1: Confirm diagnosis via drain fluid analysis.\nStep 2: Maintain patent drainage (do not remove the drain prematurely).\nStep 3: Administer IV fluids, nutritional support, and broad-spectrum antibiotics for signs of sepsis.\nStep 4: Consider somatostatin analogs (Octreotide) to reduce pancreatic secretion.\nStep 5: Surgical re-intervention only for severe, high-output, or septic cases.",
+          "references": [
+            "https://www.hpb.com/isgls-definitions-popf-postoperative-pancreatic-fistula/",
+            "https://pubmed.ncbi.nlm.nih.gov/30678601/ (Management of Clinically Relevant Pancreatic Fistula)"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "surgery_name": "Cesarean Section (C-section)",
+      "category": "Obstetrics & Gynecology",
+      "complications": [
+        {
+          "name": "Postpartum Hemorrhage (PPH)",
+          "etiology": "Atony (uterine muscles fail to contract), retained placental fragments, trauma (uterine or cervical lacerations), or coagulopathy (the '4 Ts': Tone, Tissue, Trauma, Thrombin).",
+          "risk_factors": "Prior PPH, large baby (macrosomia), multiple gestation, prolonged labor, maternal obesity, and placental abnormalities.",
+          "diagnostic_criteria": "Blood loss exceeding 1,000 mL or blood loss accompanied by signs and symptoms of hypovolemia within 24 hours of delivery.",
+          "protocol": "Step 1: Call for help (Massive Transfusion Protocol).\nStep 2: Aggressively manage fluid resuscitation and blood product transfusion.\nStep 3: Uterine massage and administration of uterotonic agents (Oxytocin, Misoprostol, Carboprost).\nStep 4: Inspect uterus, cervix, and vagina for lacerations/retained tissue.\nStep 5: Surgical management if necessary (uterine balloon tamponade, B-Lynch suture, or hysterectomy as a last resort).",
+          "references": [
+            "https://www.acog.org/clinical/clinical-guidance/practice-bulletin/articles/2023/10/postpartum-hemorrhage-management",
+            "https://pubmed.ncbi.nlm.nih.gov/26359516/ (Risk Factors and Prevention of Postpartum Hemorrhage)"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "surgery_name": "Vitreoretinal Surgery (Vitrectomy)",
+      "category": "Ophthalmology",
+      "complications": [
+        {
+          "name": "Retinal Detachment (Secondary)",
+          "etiology": "Development of new tears or proliferative vitreoretinopathy (PVR) post-surgery, or due to inadequate placement/re-absorption of tamponade agent (oil or gas).",
+          "risk_factors": "High myopia, previous retinal detachment, pre-existing PVR, post-operative inflammation, and trauma.",
+          "diagnostic_criteria": "New patient complaint of flashing lights, floaters, or a 'curtain' blocking vision, confirmed by indirect ophthalmoscopy or B-scan ultrasound showing separation of the retina from the RPE.",
+          "protocol": "Step 1: Immediate recognition.\nStep 2: Urgent return to the operating room for revision vitrectomy.\nStep 3: Repeat laser photocoagulation or cryopexy around the tears.\nStep 4: Replacement of the intraocular tamponade agent (silicone oil or long-acting gas).\nStep 5: Monitor closely post-op with regular ophthalmological examinations.",
+          "references": [
+            "https://www.aao.org/eye-health/diseases/retinal-detachment-treatment",
+            "https://www.ncbi.nlm.nih.gov/books/NBK539828/ (Vitreoretinal Surgery Complications)"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "surgery_name": "Liver Resection (Hepatectomy)",
+      "category": "Hepatobiliary Surgery",
+      "complications": [
+        {
+          "name": "Post-hepatectomy Liver Failure (PHLF)",
+          "etiology": "Inadequate remnant liver volume (insufficient functional mass remaining), high underlying liver disease (cirrhosis/steatosis), or severe ischemia-reperfusion injury.",
+          "risk_factors": "Pre-existing cirrhosis, extensive resection (>60-70% liver volume), elevated pre-operative bilirubin, and blood loss/transfusion requirement.",
+          "diagnostic_criteria": "International Study Group of Liver Surgery (ISGLS) criteria: Increasing Bilirubin and INR on or after Post-Op Day 5 that cannot be explained by other factors.",
+          "protocol": "Step 1: Aggressive critical care monitoring.\nStep 2: Optimize hemodynamics and respiratory status.\nStep 3: Nutritional support (high-calorie, low-sodium).\nStep 4: Treat underlying infections and encephalopathy.\nStep 5: Consider liver support measures (MARS) or urgent liver transplantation (if PHLF is fulminant and patient is candidate).",
+          "references": [
+            "https://www.hpb.com/isgls-phlf-criteria/",
+            "https://pubmed.ncbi.nlm.nih.gov/20349187/ (Prevention and Management of Post-Hepatectomy Liver Failure)"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "surgery_name": "Gastric Bypass (Roux-en-Y)",
+      "category": "Bariatric Surgery",
+      "complications": [
+        {
+          "name": "Anastomotic Ulcer (Marginal Ulcer)",
+          "etiology": "Ulceration at the jejunal side of the gastrojejunostomy, caused by gastric acid exposure, foreign material (sutures/staples), or *H. pylori* infection.",
+          "risk_factors": "Smoking (highest risk factor), NSAID use, pre-existing *H. pylori* infection, and inadequate acid suppression.",
+          "diagnostic_criteria": "Chronic abdominal pain, nausea, vomiting, or occult/frank GI bleeding, confirmed by upper endoscopy showing mucosal discontinuity at the anastomosis.",
+          "protocol": "Step 1: Aggressive acid suppression (high-dose PPIs).\nStep 2: Eradicate *H. pylori* if present (triple therapy).\nStep 3: Immediate cessation of smoking and NSAIDs.\nStep 4: Endoscopic intervention (cautery/clipping) for bleeding ulcers.\nStep 5: Surgical revision of the anastomosis if refractory to medical and endoscopic therapy.",
+          "references": [
+            "https://asmbs.org/guidelines/marginal-ulcer-prevention-and-management/",
+            "https://pubmed.ncbi.nlm.nih.gov/35921609/ (Marginal Ulcer Management Following Bariatric Surgery)"
+          ]
+        }
+      ]
+    }
+  ]
+}
