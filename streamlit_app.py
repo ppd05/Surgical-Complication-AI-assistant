@@ -12,7 +12,12 @@ from src.ai_engine import initialize_llm, generate_response_chain, generate_resp
 # Loading environment variables
 load_dotenv()
 
-API_KEY = os.getenv("GOOGLE_API_KEY") 
+try:
+    API_KEY = st.secrets["GOOGLE_API_KEY"]
+except:
+    API_KEY = os.getenv("GOOGLE_API_KEY")
+
+
 KB_PATH = "data/surgical_knowledge.json"
 
 st.set_page_config(
@@ -331,4 +336,5 @@ with tab2:
             # Using st.markdown now, as the AI response contains Markdown headers from the structured prompt
             st.markdown(response)
         else:
+
             st.warning("Please enter a question to get a response.")
