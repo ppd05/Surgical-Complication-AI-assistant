@@ -2,8 +2,9 @@ import streamlit as st
 import os
 import re
 from dotenv import load_dotenv
+import time # **<-- ADDED FOR POINT 2: Introduce Delays**
 
-#Importing Core Components from Source Files 
+# Importing Core Components from Source Files 
 from src.data_loader import load_json_knowledgebase, prepare_documents
 from src.vectorstore_manager import build_faiss_retriever
 from src.ai_engine import initialize_llm, generate_response_chain, generate_response 
@@ -20,6 +21,13 @@ except:
 
 KB_PATH = "data/surgical_knowledge.json"
 
+# **<-- START POINT 3: Model Change**
+# Define the model name here for clarity and easy modification
+# NOTE: This assumes your initialize_llm in src/ai_engine.py accepts this as an argument.
+# If your initialize_llm does NOT accept a model_name argument, you must update that file as well.
+MODEL_NAME = "gemini-2.5-flash" 
+# **<-- END POINT 3: Model Change**
+
 st.set_page_config(
     page_title="Surgical Complication AI Assistant", 
     page_icon="⚕️", 
@@ -35,7 +43,8 @@ PH_COMPLICATION = "--- Select a Complication ---"
 # CACHING AND INITIALIZATION
 
 @st.cache_resource
-def initialize_resources(api_key, kb_path):
+# **<-- MODIFIED TO ACCEPT model_name**
+def initialize_resources(api_key, kb_path, model_name):
     #Initializes the data, LLM, Retriever, and RAG chain.
     #Uses st.cache_resource to run only once.
 
@@ -47,10 +56,16 @@ def initialize_resources(api_key, kb_path):
     try:
         kb_data = load_json_knowledgebase(kb_path)
         docs = prepare_documents(kb_data)
+        
+        # **<-- START POINT 2: Introduce Delays**
+        st.info("Deployment: Pausing for 5 seconds to prevent initial rate limit spike (429 Error).")
+        time.sleep(5) 
+        # **<-- END POINT 2: Introduce Delays**
 
         # 2. Initialize LLM and Retriever
         # Using a flash model for speed and efficiency in RAG
-        llm = initialize_llm(api_key) 
+        # **<-- MODIFIED to pass model_name**
+        llm = initialize_llm(api_key, model_name=model_name) 
         retriever = build_faiss_retriever(docs)
 
         # 3. Build the LCEL RAG Chain
@@ -101,14 +116,15 @@ def get_protocol_summary(kb_data):
         # Use a bulleted list for surgeries
         summary += f"- **{surgery['surgery_name']}** (`{surgery.get('category', 'General')}`)\n"
         # Nested list for complications
-        summary += f"  - Complications: {', '.join(comp_names)}\n"
+        summary += f"  - Complications: {', '.join(comp_names)}\n"
     return summary
 
 
 # APP
 
 try:
-    knowledge_base_data, rag_chain_instance = initialize_resources(API_KEY, KB_PATH)
+    # **<-- MODIFIED: Pass MODEL_NAME to the cached function**
+    knowledge_base_data, rag_chain_instance = initialize_resources(API_KEY, KB_PATH, MODEL_NAME)
     
     # Store essential data for display/filtering
     if 'kb_data' not in st.session_state:
@@ -128,15 +144,14 @@ st.sidebar.markdown(
     This assistant provides clinical information
     based on a pre-loaded knowledge base.
 
-    ### **Disclaimer:**  
-    ***This Application is created for educational and research purposes only.  
+    ### **Disclaimer:** ***This Application is created for educational and research purposes only.  
     For any medical-related help, please consult a medical professional.***
     """
 )
 st.sidebar.divider()
 st.sidebar.markdown(
-    """
-    **RAG Model:** `gemini-2.0-flash-lite`
+    f"""
+    **RAG Model:** `{MODEL_NAME}`
     
     **Scope:** Etiology, Risk Factors, Diagnosis, and Management Protocols.
     """
