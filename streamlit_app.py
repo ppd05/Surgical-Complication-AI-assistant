@@ -2,7 +2,7 @@ import streamlit as st
 import os
 import re
 from dotenv import load_dotenv
-import time # **<-- ADDED FOR POINT 2: Introduce Delays**
+import time
 
 # Importing Core Components from Source Files 
 from src.data_loader import load_json_knowledgebase, prepare_documents
@@ -20,13 +20,7 @@ except:
 
 
 KB_PATH = "data/surgical_knowledge.json"
-
-# **<-- START POINT 3: Model Change**
-# Define the model name here for clarity and easy modification
-# NOTE: This assumes your initialize_llm in src/ai_engine.py accepts this as an argument.
-# If your initialize_llm does NOT accept a model_name argument, you must update that file as well.
-MODEL_NAME = "gemini-2.5-flash" 
-# **<-- END POINT 3: Model Change**
+MODEL_NAME = "gemini-2.0-flash-lite" 
 
 st.set_page_config(
     page_title="Surgical Complication AI Assistant", 
@@ -353,3 +347,4 @@ with tab2:
         else:
 
             st.warning("Please enter a question to get a response.")
+
