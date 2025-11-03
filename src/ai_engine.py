@@ -4,9 +4,12 @@ from langchain_core.runnables import RunnablePassthrough
 from langchain_core.output_parsers import StrOutputParser
 from operator import itemgetter
 
-def initialize_llm(api_key):
-    #Initialize the Gemini 2.0 Flash-Lite model.
-    return ChatGoogleGenerativeAI(model="gemini-2.0-flash-lite", google_api_key=api_key, temperature=0.0)
+# **<-- MODIFIED FUNCTION SIGNATURE AND BODY**
+def initialize_llm(api_key, model_name):
+    """
+    Initializes the specified Gemini model.
+    """
+    return ChatGoogleGenerativeAI(model=model_name, google_api_key=api_key, temperature=0.0)
 
 def generate_response_chain(llm, retriever):
     SYSTEM_PROMPT = (
