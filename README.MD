@@ -62,7 +62,7 @@ Structured Clinical Response
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/yourusername/surgical-complication-assistant.git
+git clone https://github.com/ppd05/surgical-complication-assistant.git
 cd surgical-complication-assistant
 ```
 
@@ -313,4 +313,5 @@ surgical-complication-assistant/
 ├── requirements.txt
 ├── .env.example
 ├── .gitignore
+
 └── README.md
